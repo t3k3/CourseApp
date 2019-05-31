@@ -13,7 +13,13 @@ namespace AspNetCore
     using Microsoft.AspNetCore.Mvc;
     using Microsoft.AspNetCore.Mvc.Rendering;
     using Microsoft.AspNetCore.Mvc.ViewFeatures;
+#line 1 "/home/tek/Desktop/dotnet/CourseApp/Views/_ViewImports.cshtml"
+using CourseApp.Models;
+
+#line default
+#line hidden
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"94f3ceef0122c75ff5d30348e657704c2d17af8b", @"/Views/Course/index.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"b2c5954ad745c84f09486a3bf06d76423bfbe838", @"/Views/_ViewImports.cshtml")]
     public class Views_Course_index : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         #line hidden
@@ -43,7 +49,7 @@ namespace AspNetCore
             WriteLiteral("<!DOCTYPE html>\n<html>\n");
             EndContext();
             BeginContext(23, 37, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "94f3ceef0122c75ff5d30348e657704c2d17af8b2832", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "94f3ceef0122c75ff5d30348e657704c2d17af8b3118", async() => {
                 BeginContext(29, 24, true);
                 WriteLiteral("\n\t<title>Course</title>\n");
                 EndContext();
@@ -63,7 +69,7 @@ namespace AspNetCore
             WriteLiteral("\n");
             EndContext();
             BeginContext(61, 36, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "94f3ceef0122c75ff5d30348e657704c2d17af8b4011", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "94f3ceef0122c75ff5d30348e657704c2d17af8b4297", async() => {
                 BeginContext(67, 23, true);
                 WriteLiteral("\n    course/index view\n");
                 EndContext();

@@ -6,6 +6,7 @@ namespace CourseApp.Models
         public string Email { get; set; }
         public string Phone { get; set; }
 
-        public bool Confirm { get; set; } //true, false , null
+        //bool? ile kullanıldığında ? nullable kullanılabilir anlamındadır.
+        public bool? Confirm { get; set; } //true, false , null
     }
 }

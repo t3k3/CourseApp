@@ -26,3 +26,4 @@
 /home/tek/Desktop/dotnet/CourseApp/obj/Debug/netcoreapp2.2/Razor/Views/Course/list.g.cshtml.cs
 /home/tek/Desktop/dotnet/CourseApp/obj/Debug/netcoreapp2.2/Razor/Views/Course/Details.g.cshtml.cs
 /home/tek/Desktop/dotnet/CourseApp/obj/Debug/netcoreapp2.2/Razor/Views/Course/apply.g.cshtml.cs
+/home/tek/Desktop/dotnet/CourseApp/obj/Debug/netcoreapp2.2/Razor/Views/_ViewImports.g.cshtml.cs

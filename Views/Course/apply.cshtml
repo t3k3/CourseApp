@@ -1,3 +1,6 @@
+<!--Student ile Student.cs classını burada kullanacağımızı
+belirttik. Sadece Student yazabilmemizin sebebi Views klasöründeki
+_ViewImports.cshtml dosyasında "using CourseApp.Model" belirtmemizdir. -->
 @model Student
 
 <!DOCTYPE html>
@@ -9,26 +12,34 @@
     <title>Apply</title>
 </head>
 <body>
-    <form action="/course/apply">
+
+    <!--asp-action="apply" yapısıyla formun post edileceği yeri
+    kendisi çözümler. burada Course klasöründe olduğumuz için?
+     /Course/Apply adresine post işlemi yapılacaktır.-->
+    <form asp-action="apply">
 
         <p>
-            <label for="name">Adınız</label>
-            <input type="text" name="name">
+            <!--burada asp-for="Name" kullanıldığında label için 
+            for="Name" çözümlemesi yapar.
+            input için ise, type="text" çözümünü yapar. Bunun nedeni
+            Student.cs classında Name metodunun string değer olmasıdır.-->
+            <label asp-for="Name">Adınız</label>
+            <input asp-for="Name">
         </p>
         
         <p>
-            <label for="email">EPosta</label>
-            <input type="text" name="email">
+            <label asp-for="Email">EPosta</label>
+            <input asp-for="Email">
         </p>
 
         <p>
-            <label for="phone">Telefon</label>
-            <input type="text" name="phone">
+            <label asp-for="Phone">Telefon</label>
+            <input asp-for="Phone">
         </p>
         
         <p>
-            <label for="confirm">Kursa Katılacak Mısınız?</label>
-            <select name="confirm">
+            <label asp-for="Confirm">Kursa Katılacak Mısınız?</label>
+            <select asp-for="Confirm">
                 <option value="true">Evet</option>
                 <option value="false">Hayır</option>
             </select>

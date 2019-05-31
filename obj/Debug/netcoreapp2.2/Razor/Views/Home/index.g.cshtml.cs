@@ -13,7 +13,13 @@ namespace AspNetCore
     using Microsoft.AspNetCore.Mvc;
     using Microsoft.AspNetCore.Mvc.Rendering;
     using Microsoft.AspNetCore.Mvc.ViewFeatures;
+#line 1 "/home/tek/Desktop/dotnet/CourseApp/Views/_ViewImports.cshtml"
+using CourseApp.Models;
+
+#line default
+#line hidden
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"2072bddb707a87daa0ff36ac4b15a0e0093a85f8", @"/Views/Home/index.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"b2c5954ad745c84f09486a3bf06d76423bfbe838", @"/Views/_ViewImports.cshtml")]
     public class Views_Home_index : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         #line hidden
@@ -43,7 +49,7 @@ namespace AspNetCore
             WriteLiteral("<!DOCTYPE html>\n<html>\n");
             EndContext();
             BeginContext(23, 35, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "2072bddb707a87daa0ff36ac4b15a0e0093a85f82818", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "2072bddb707a87daa0ff36ac4b15a0e0093a85f83104", async() => {
                 BeginContext(29, 22, true);
                 WriteLiteral("\n\t<title>Home</title>\n");
                 EndContext();
@@ -63,7 +69,7 @@ namespace AspNetCore
             WriteLiteral("\n");
             EndContext();
             BeginContext(59, 219, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "2072bddb707a87daa0ff36ac4b15a0e0093a85f83996", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "2072bddb707a87daa0ff36ac4b15a0e0093a85f84282", async() => {
                 BeginContext(65, 9, true);
                 WriteLiteral("\n    <!--");
                 EndContext();
