@@ -1,0 +1,32 @@
+@model Student
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    isim : @Model.Name
+    mail : @Model.Email
+    Telefon : @Model.Phone
+
+    @if (Model.Confirm==true)
+    {
+        <span>
+            Geliyor.
+        </span>
+        <div>
+            Diğer Katılımcıları <a asp-action="List">Görüntüle</a>
+        </div>
+        
+    }
+    else
+    {
+        <span>
+            Gelmiyor.
+        </span>
+    }
+</body>
+</html>

@@ -13,7 +13,8 @@ _ViewImports.cshtml dosyasında "using CourseApp.Model" belirtmemizdir. -->
 </head>
 <body>
 
-    <!--asp-action="apply" yapısıyla formun post edileceği yeri
+    <!--TagHelpers
+        asp-action="apply" yapısıyla formun post edileceği yeri
     kendisi çözümler. burada Course klasöründe olduğumuz için?
      /Course/Apply adresine post işlemi yapılacaktır.-->
     <form asp-action="apply">
@@ -40,6 +41,7 @@ _ViewImports.cshtml dosyasında "using CourseApp.Model" belirtmemizdir. -->
         <p>
             <label asp-for="Confirm">Kursa Katılacak Mısınız?</label>
             <select asp-for="Confirm">
+                <option value="">Seçiniz</option>
                 <option value="true">Evet</option>
                 <option value="false">Hayır</option>
             </select>

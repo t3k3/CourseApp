@@ -2792,6 +2792,11 @@
       "FilePath": "Views/Course/apply.cshtml",
       "TargetPath": "Views/Course/apply.cshtml",
       "FileKind": "mvc"
+    },
+    {
+      "FilePath": "Views/Course/Thanks.cshtml",
+      "TargetPath": "Views/Course/Thanks.cshtml",
+      "FileKind": "mvc"
     }
   ]
 }
