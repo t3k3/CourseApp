@@ -1,9 +1,36 @@
+<!--Diğer Viewlerde model için yalnızca Student yazabiliyorken
+burada döndürdüğümüz veri (students) liste olduğu için IEnumerable<Student>
+şeklinde yazmalıyız.-->
+@model IEnumerable<Student>
+
 <!DOCTYPE html>
 <html>
 <head>
 	<title>Course</title>
 </head>
 <body>
-    course/list view
+    <!--foreach döngüsü kullanıyoruz. "student" kısmı farklı değer alabilir
+    Model yazan yer "Model.Name" şeklinde ulaşabildiğimiz nesnelerdir.
+    Foreach ile bu nesneler üzerinde gezinebiliyoruz.-->
+    
+    <table border="true">
+            <thead>
+                <td>İsim</td>
+                <td>Mail</td>
+                <td>Telefon</td>
+                <td>Onay</td>
+            </thead>
+    @foreach (var student in Model)
+    {
+        
+            <tbody>
+                <td>@student.Name</td>
+                <td>@student.Email</td>
+                <td>@student.Phone</td>
+                <td>@student.Confirm</td>
+            </tbody>
+    }
+    </table>
+
 </body>
 </html>

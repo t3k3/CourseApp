@@ -1,3 +1,4 @@
+using System.Linq;
 using CourseApp.Models;
 using Microsoft.AspNetCore.Mvc;
 
@@ -40,15 +41,27 @@ namespace CourseApp.Controllers
         [HttpPost]
         public IActionResult Apply(Student student)
         {
-          //Model Binding
-          Repository.AddStudent(student);
-          return View("Thanks", student);
+            if (ModelState.IsValid)
+            {
+                //Model Binding
+                Repository.AddStudent(student);
+                return View("Thanks", student);   
+            } 
+            else {
+                return View(student);
+            }
+          
+          
         }
 
         // localhost: 5000/course/list => course/list.cshtml
         public IActionResult List() 
         { 
-            return View();
+            /*student list değişkenine Repository.Student içerisinden
+            Confirm değeri true olanları alıyoruz. View() ile döndürdüğümüz
+            student verisi list tipindedir. */
+            var students = Repository.Students.Where(i=>i.Confirm==true);
+            return View(students);
         }
 
         public IActionResult Details()

@@ -17,7 +17,8 @@ _ViewImports.cshtml dosyasında "using CourseApp.Model" belirtmemizdir. -->
         asp-action="apply" yapısıyla formun post edileceği yeri
     kendisi çözümler. burada Course klasöründe olduğumuz için?
      /Course/Apply adresine post işlemi yapılacaktır.-->
-    <form asp-action="apply">
+    <form asp-action="apply" method="POST">
+        <div asp-validation-summary="All"></div>
 
         <p>
             <!--burada asp-for="Name" kullanıldığında label için 
