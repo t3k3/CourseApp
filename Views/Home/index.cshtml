@@ -2,6 +2,13 @@
 <html>
 <head>
 	<title>Home</title>
+<!--statik doyaların (css,js) çalışabilmesi iin dışarıya açılmış olması gerekir.
+Startup.cs dosyasına Configure() metoduna hangi klasör veya dosyaların
+dışarıdan erişilebilir olacağını söylememiz gerekiyor.
+Startup.cs de belirttiğimiz gibi aslında dosya "node_modules" klasorunde olmasına rağmen
+RequestPath ile dosyaya /modules/ yazarak da ulaşabiliriz.-->
+<link rel="stylesheet" href="modules/bootstrap/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="~/css/style.css">
 </head>
 <body>
     <!--@ViewBag ile Controller'da oluturduğumuz değişkenleri
@@ -14,5 +21,6 @@
     <p>
         <a asp-action="apply" asp-controller="course">Başvuru Yap</a>
     </p>
+    <p>Selam</p>
 </body>
 </html>
