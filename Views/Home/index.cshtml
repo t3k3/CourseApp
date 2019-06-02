@@ -11,16 +11,21 @@ RequestPath ile dosyaya /modules/ yazarak da ulaşabiliriz.-->
 <link rel="stylesheet" href="~/css/style.css">
 </head>
 <body>
-    <!--@ViewBag ile Controller'da oluturduğumuz değişkenleri
-    View'de @ViewBag.DegiskenAdi şeklinde çekiyoruz.-->
-    Merhaba @ViewBag.UserName 
-    @ViewBag.Greeting
-    <br>
-    Saat : @ViewBag.Saat
 
-    <p>
-        <a asp-action="apply" asp-controller="course">Başvuru Yap</a>
-    </p>
-    <p>Selam</p>
+    <div class="container m-2">
+        <div class="card mx-auto" style="500px;">
+            <div class="card header">
+                <!--@ViewBag ile Controller'da oluturduğumuz değişkenleri
+                View'de @ViewBag.DegiskenAdi şeklinde çekiyoruz.-->
+                @ViewBag.UserName @ViewBag.Greeting
+                Saat : @ViewBag.Saat
+            </div>
+            <div class="card body">
+                <p class="card-text">Kurslara Başvuru Yapın</p>
+                <a asp-action="apply" asp-controller="course" class="btn btn-primary">Başvuru Yap</a>
+            </div>
+        </div>
+    </div>
+    
 </body>
 </html>
