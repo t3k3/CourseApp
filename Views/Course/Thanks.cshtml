@@ -5,28 +5,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/css/style.css">
     <title>Document</title>
 </head>
 <body>
-    isim : @Model.Name
-    mail : @Model.Email
-    Telefon : @Model.Phone
 
-    @if (Model.Confirm==true)
-    {
-        <span>
-            Geliyor.
-        </span>
-        <div>
-            Diğer Katılımcıları <a asp-action="List">Görüntüle</a>
+
+        <div class="container m-2">
+        <div class="card mx-auto" style="500px;">
+            <div class="card header">
+                isim : @Model.Name
+                mail : @Model.Email
+                Telefon : @Model.Phone
+            </div>
+            <div class="card body">
+
+                @if (Model.Confirm==true)
+                {
+                    <span>
+                        Geliyor.
+                    </span>
+                    <div>
+                        Diğer Katılımcıları <a asp-action="List">Görüntüle</a>
+                    </div>
+                    
+                }
+                else
+                {
+                    <span>
+                        Gelmiyor.
+                    </span>
+                }
+            </div>
         </div>
-        
-    }
-    else
-    {
-        <span>
-            Gelmiyor.
-        </span>
-    }
+    </div>
+
+
+
+
+
 </body>
 </html>

@@ -11,6 +11,7 @@ namespace CourseApp.Controllers
         public IActionResult Index() 
         {
             int saat = DateTime.Now.Hour;
+            int dakika = DateTime.Now.Minute; 
 
             // if else Uzun Kullanım
             /* 
@@ -33,7 +34,7 @@ namespace CourseApp.Controllers
             // Viewbah classından UserName değişkeni oluşturup view'da görüntüledik.
             ViewBag.UserName = "Ahmet";
 
-            ViewBag.Saat = saat;
+            ViewBag.Zaman = saat + " : " + dakika;
             
 
             return View();

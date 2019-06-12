@@ -7,9 +7,17 @@ burada döndürdüğümüz veri (students) liste olduğu için IEnumerable<Stude
 <html>
 <head>
 	<title>Course</title>
+    <link rel="stylesheet" href="../modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/css/style.css">
 </head>
 <body>
-    <!--foreach döngüsü kullanıyoruz. "student" kısmı farklı değer alabilir
+
+        <div class="container m-2">
+        <div class="card mx-auto" style="500px;">
+            <div class="card header">
+                Kursa Katılanlar
+            </div>
+                <!--foreach döngüsü kullanıyoruz. "student" kısmı farklı değer alabilir
     Model yazan yer "Model.Name" şeklinde ulaşabildiğimiz nesnelerdir.
     Foreach ile bu nesneler üzerinde gezinebiliyoruz. "Model" diziyi temsil ediyor.
     Foreach (1,2,3,4)
@@ -18,24 +26,29 @@ burada döndürdüğümüz veri (students) liste olduğu için IEnumerable<Stude
     3: in (içinde)
     4: Dizi-->
     
-    <table border="true">
-            <thead>
-                <td>İsim</td>
-                <td>Mail</td>
-                <td>Telefon</td>
-                <td>Onay</td>
-            </thead>
-    @foreach (var student in Model)
-    {
-        
-            <tbody>
-                <td>@student.Name</td>
-                <td>@student.Email</td>
-                <td>@student.Phone</td>
-                <td>@student.Confirm</td>
-            </tbody>
-    }
-    </table>
+            <table class="table table-bordered table-stripped">
+                    <thead>
+                        <td>İsim</td> 
+                        <td>Mail</td>
+                        <td>Telefon</td>
+                        <td>Onay</td>
+                    </thead>
+            @foreach (var student in Model)
+            {
+                
+                    <tbody>
+                        <td>@student.Name</td>
+                        <td>@student.Email</td>
+                        <td>@student.Phone</td>
+                        <td>@student.Confirm</td>
+                    </tbody>
+            }
+            </table>
+        </div>
+    </div>
+
+
+
 
 </body>
 </html>
