@@ -1,5 +1,6 @@
 using System;
 using Microsoft.AspNetCore.Mvc;
+using CourseApp.Models;
 
 namespace CourseApp.Controllers
 {
@@ -10,6 +11,7 @@ namespace CourseApp.Controllers
         // localhost:5000/home/index = home/index.cshtml
         public IActionResult Index() 
         {
+            string dt = DateTime.Now.ToShortTimeString().ToString();
             int saat = DateTime.Now.Hour;
             int dakika = DateTime.Now.Minute; 
 
@@ -29,7 +31,7 @@ namespace CourseApp.Controllers
             // Greeting isimi değişken oluşturduk saat değerine göre 
             // değişkenimize değer atadık.
             ViewBag.Greeting = saat > 12 ? "İyi günler" : "Günaydın";
-           
+            ViewBag.aman = dt;
             // Viewbag Controller'dan View'a değişken gönderir.
             // Viewbah classından UserName değişkeni oluşturup view'da görüntüledik.
             ViewBag.UserName = "Ahmet";
@@ -43,6 +45,22 @@ namespace CourseApp.Controllers
         // localhost:5000/home/about => home/about.cshtml
         public IActionResult About() 
         {
+            return View();
+        }
+
+        public IActionResult Test()
+        {
+            var kurs = new Course()
+            { 
+                Name = "isim", description = "1"
+            };
+
+            ViewData["course"] = kurs;
+
+            ViewBag.course = kurs;
+
+            ViewBag.count = 10;
+
             return View();
         }
     }
